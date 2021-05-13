@@ -36,6 +36,13 @@
             color: blue;
             font-weight: bold;
         }
+        .my-form {
+            width: 400px;
+            margin: 0px auto 20px;
+            border: 2px solid;
+            border-radius: 5px;
+            padding: 20px;
+        }
     </style>
 </head>
 
@@ -49,6 +56,21 @@
                 <a class="btn btn-primary btn-lg" href="#" role="button">포스팅 박스 열기</a>
             </p>
         </div>
+        
+        <div class="my-form">
+            <div class="form-group">
+                <label for="formGroupExampleInput">아티클 URL</label>
+                <input type="text" class="form-control" id="formGroupExampleInput">
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">간단 코멘트</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">기사 저장</a>
+            </p>
+        </div>
+        
         <div class="card-columns">
             <div class="card">
                 <img class="card-img-top"
