@@ -46,6 +46,22 @@
             border: 2px solid lightgray;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            moneyRate();
+        });
+        function moneyRate() {
+            $.ajax({
+                type: "GET",
+                url: "https://api.manana.kr/exchange/rate.json",
+                data: {},
+                success: function (response) {
+                  let rate = response[1]['rate'];
+                  $('#rate').text(rate);
+                }
+            })
+        }
+    </script>
 </head>
 <body>
     <div class="card" style="width: 25rem;">
@@ -55,6 +71,7 @@
         <div class="card-body">
             <h5 class="card-title">화분을 팝니다<span style="font-size: 20px">가격: 30000원</span></h5>
             <p class="card-text">깔끔한 화분입니다.</p>
+            <div id="rate"></div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon3">주문자 이름</span>
